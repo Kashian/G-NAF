@@ -6,7 +6,9 @@ import os
 print 'drop schema if exists staging cascade;'
 print 'create schema staging;'
 
-for fn in glob.glob('./source/*/*/*/*/*.psv'):
+#Path changed in August 2016
+
+for fn in glob.glob('./source/*/*/*/*.psv'):
   table = os.path.basename(fn).lower()
   table = table[:table.index('_psv.psv')]
 
